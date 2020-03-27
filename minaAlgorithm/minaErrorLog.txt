@@ -1,0 +1,164 @@
+console: Failed to install '': java.nio.charset.UnsupportedCharsetException: cp0.
+3D [dev] 1.6.0-scijava-2-pre11-daily-experimental daily
+
+C:\Users\thoma\.ImageJ_3D_Viewer.props (The system cannot find the file specified)
+[ERROR] Traceback (most recent call last):
+  File "Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py", line 291, in <module>
+  File "Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py", line 136, in run
+
+Request:
+-	net.imagej.ops.Ops$Threshold$Apply/net.imagej.ops.special.computer.BinaryComputerOp(
+		IterableInterval,
+		IntImagePlus,
+		ARGBType)
+
+Candidates:
+1. 	(Iterable out) =
+	net.imagej.ops.threshold.apply.ApplyConstantThreshold(
+		Iterable out,
+		Iterable in1,
+==>		RealType in2)
+	Inconvertible type: net.imglib2.type.numeric.ARGBType => capture of ?
+2. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparable(
+==>		BitType out,
+		Comparable in1,
+		Object in2)
+	Inconvertible type: java.lang.Class => class net.imglib2.type.logic.BitType
+3. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparator(
+		BitType out,
+		Object in1,
+		Object in2,
+		Comparator comparator)
+	Not enough arguments: 3 < 4
+
+	at net.imagej.ops.DefaultOpMatchingService.singleMatch(DefaultOpMatchingService.java:432)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:97)
+	at net.imagej.ops.OpEnvironment.op(OpEnvironment.java:239)
+	at net.imagej.ops.OpEnvironment.op(OpEnvironment.java:221)
+	at net.imagej.ops.special.SpecialOp.op(SpecialOp.java:308)
+	at net.imagej.ops.special.computer.Computers.binary(Computers.java:266)
+	at net.imagej.ops.threshold.AbstractApplyThresholdImg.initialize(AbstractApplyThresholdImg.java:60)
+	at net.imagej.ops.threshold.ApplyThresholdMethod$Otsu.initialize(ApplyThresholdMethod.java:353)
+	at net.imagej.ops.DefaultOpMatchingService.singleMatch(DefaultOpMatchingService.java:425)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:97)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:83)
+	at net.imagej.ops.OpEnvironment.module(OpEnvironment.java:253)
+	at net.imagej.ops.OpEnvironment.run(OpEnvironment.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+java.lang.IllegalArgumentException: java.lang.IllegalArgumentException: No matching 'net.imagej.ops.Ops$Threshold$Apply/net.imagej.ops.special.computer.BinaryComputerOp' op
+
+Request:
+-	net.imagej.ops.Ops$Threshold$Apply/net.imagej.ops.special.computer.BinaryComputerOp(
+		IterableInterval,
+		IntImagePlus,
+		ARGBType)
+
+Candidates:
+1. 	(Iterable out) =
+	net.imagej.ops.threshold.apply.ApplyConstantThreshold(
+		Iterable out,
+		Iterable in1,
+==>		RealType in2)
+	Inconvertible type: net.imglib2.type.numeric.ARGBType => capture of ?
+2. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparable(
+==>		BitType out,
+		Comparable in1,
+		Object in2)
+	Inconvertible type: java.lang.Class => class net.imglib2.type.logic.BitType
+3. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparator(
+		BitType out,
+		Object in1,
+		Object in2,
+		Comparator comparator)
+	Not enough arguments: 3 < 4
+
+
+	at org.python.core.Py.JavaError(Py.java:552)
+	at org.python.core.Py.JavaError(Py.java:543)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:190)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:206)
+	at org.python.core.PyObject.__call__(PyObject.java:515)
+	at org.python.core.PyObject.__call__(PyObject.java:519)
+	at org.python.core.PyMethod.__call__(PyMethod.java:156)
+	at org.python.pycode._pyx0.run$2(Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py:287)
+	at org.python.pycode._pyx0.call_function(Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:308)
+	at org.python.core.PyFunction.function___call__(PyFunction.java:471)
+	at org.python.core.PyFunction.__call__(PyFunction.java:466)
+	at org.python.core.PyFunction.__call__(PyFunction.java:456)
+	at org.python.pycode._pyx0.f$0(Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py:291)
+	at org.python.pycode._pyx0.call_function(Plugins/StuartLab/MiNA_Scripts/MiNA_Analyze_Morphology.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.core.__builtin__.eval(__builtin__.java:497)
+	at org.python.core.__builtin__.eval(__builtin__.java:501)
+	at org.python.util.PythonInterpreter.eval(PythonInterpreter.java:259)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:57)
+	at org.python.jsr223.PyScriptEngine.eval(PyScriptEngine.java:31)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at org.scijava.script.ScriptModule.run(ScriptModule.java:160)
+	at org.scijava.module.ModuleRunner.run(ModuleRunner.java:168)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:127)
+	at org.scijava.module.ModuleRunner.call(ModuleRunner.java:66)
+	at org.scijava.thread.DefaultThreadService.lambda$wrap$2(DefaultThreadService.java:228)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: No matching 'net.imagej.ops.Ops$Threshold$Apply/net.imagej.ops.special.computer.BinaryComputerOp' op
+
+Request:
+-	net.imagej.ops.Ops$Threshold$Apply/net.imagej.ops.special.computer.BinaryComputerOp(
+		IterableInterval,
+		IntImagePlus,
+		ARGBType)
+
+Candidates:
+1. 	(Iterable out) =
+	net.imagej.ops.threshold.apply.ApplyConstantThreshold(
+		Iterable out,
+		Iterable in1,
+==>		RealType in2)
+	Inconvertible type: net.imglib2.type.numeric.ARGBType => capture of ?
+2. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparable(
+==>		BitType out,
+		Comparable in1,
+		Object in2)
+	Inconvertible type: java.lang.Class => class net.imglib2.type.logic.BitType
+3. 	(BitType out) =
+	net.imagej.ops.threshold.apply.ApplyThresholdComparator(
+		BitType out,
+		Object in1,
+		Object in2,
+		Comparator comparator)
+	Not enough arguments: 3 < 4
+
+	at net.imagej.ops.DefaultOpMatchingService.singleMatch(DefaultOpMatchingService.java:432)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:97)
+	at net.imagej.ops.OpEnvironment.op(OpEnvironment.java:239)
+	at net.imagej.ops.OpEnvironment.op(OpEnvironment.java:221)
+	at net.imagej.ops.special.SpecialOp.op(SpecialOp.java:308)
+	at net.imagej.ops.special.computer.Computers.binary(Computers.java:266)
+	at net.imagej.ops.threshold.AbstractApplyThresholdImg.initialize(AbstractApplyThresholdImg.java:60)
+	at net.imagej.ops.threshold.ApplyThresholdMethod$Otsu.initialize(ApplyThresholdMethod.java:353)
+	at net.imagej.ops.DefaultOpMatchingService.singleMatch(DefaultOpMatchingService.java:425)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:97)
+	at net.imagej.ops.DefaultOpMatchingService.findMatch(DefaultOpMatchingService.java:83)
+	at net.imagej.ops.OpEnvironment.module(OpEnvironment.java:253)
+	at net.imagej.ops.OpEnvironment.run(OpEnvironment.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:188)
+	... 31 more
