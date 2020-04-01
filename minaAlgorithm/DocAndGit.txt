@@ -8,8 +8,3 @@ Documentation Mina sur le site de ImageJ :
 
 https://imagej.net/MiNA_-_Mitochondrial_Network_Analysis
 
-
-
-Diapositives d'exemple de test de l'algorithme MiNa sur les données actuelles :
-
-https://docs.google.com/presentation/d/1zQE9OfqBGSp-Z7JcFnTTq7tmJa84olGIqeY4T19qEe8/edit?usp=sharing
